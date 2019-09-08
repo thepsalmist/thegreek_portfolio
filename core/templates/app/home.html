@@ -1,0 +1,149 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+<!-- LANDING -->
+<section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                <div class="about-text">
+                    <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                    <h1 class="animated animated-text">
+                        <span class="mr-2">Hello, I am Xavier </span>
+                        <div class="animated-info">
+                            <span class="animated-item">a Telecommunications Engineer,</span>
+                            <span class="animated-item">Full Stack Web Developer</span>
+                            <span class="animated-item"> and UI Specialist</span>
+                        </div>
+                    </h1>
+
+                    <p>Building a successful product is a challenge. I am highly energetic in user experience design,
+                        interfaces and web development.</p>
+
+                    <div class="custom-btn-group mt-4">
+                        <a href="media/Resume/Xavier.pdf" class="btn mr-lg-2 custom-btn"> Download Resume</a>
+                        <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Hire Me!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 col-12">
+                <div class="about-image svg">
+                    <img src="media/images/home_img.svg" class="img-fluid" alt="svg image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-12" id="about_section">
+                <h2 class="mb-4">About me<span>
+                        <hr></span></h2>
+                <div class="media" id="about_section">
+                    <img class="rounded-circle account-img" src="{{about.image.url}}" alt="">
+                </div>
+                <div>
+                    <p id="description">
+                        {{about.description}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12 text-center">
+                <h2 class="mb-4 mobile-mt-2">Skills<span>
+                        <hr></span></h2>
+
+
+                <div class="timeline">
+                    {% for skill in skills%}
+                    <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span><img src="{{skill.image.url}}" alt=""></span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>{{skill.name}}</span></h3>
+                            <p>{{skill.description}}</p>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SERVICES -->
+<section class="project py-5" id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-11 text-center mx-auto col-12">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Services<span>
+                            <hr></span></h2>
+                    <h3>Things I have designed for digital media agencies</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            {%for service in services%}
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="view overlay">
+                        <img class="card-img-top" src="{{service.image.url}}" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{service.name}}</h4>
+                        <p class="card-text">{{service.description}}</p>
+                        <a href="#" class="btn mr-lg-2 custom-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</section>
+<!-- CONTACT -->
+<section class="d-lg-flex justify-content-center align-items-center" id="contact">
+    <div class="container">
+        <div class="row">
+            <h2 class="mb-4">Get in touch<span>
+                    <hr></span>
+            </h2>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6 col-12">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" class="form-control mb-4">
+                    <input type="email" placeholder="E-mail" class="form-control mb-4">
+                    <div class="form-group">
+                        <textarea name="" id="" cols="30" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <button class="btn custom-btn custom-btn-bg custom-btn-link" type="submit">Submit</button>
+                </div>
+
+            </div>
+            <div class="col-lg-6 col-12">
+                <h3>Contact Info.</h3>
+                <div class="contact_icons">
+                    <a href="https://twitter.com/xavierfrank4"><i class="fab fa-twitter cyan-text fa-lg mr-3"></i></a>
+                    <a href="https://medium.com/@xf.xavierfrank"><i class="fab fa-medium fa-lg mr-3"></i></a>
+                    <a href="https://github.com/thepsalmist"><i class="fab fa-github fa-lg mr-3"></i></a>
+                    <a href="https://www.linkedin.com/in/xavier-f-7b94b17a/"><i
+                            class="fab fa-linkedin cyan-text fa-lg mr-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
