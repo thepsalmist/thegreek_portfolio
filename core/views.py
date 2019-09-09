@@ -5,7 +5,7 @@ from .models import About, Skill, Service, Project
 
 
 class HomeTemplateView(TemplateView):
-    template_name = "app/home.html"
+    template_name = "core/home.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

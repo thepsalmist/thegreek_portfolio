@@ -1,4 +1,4 @@
 from django.urls import path
 from .views import HomeTemplateView
 
-urlpatterns = [path("", HomeTemplateView.as_view(), name="app-home")]
+urlpatterns = [path("", HomeTemplateView.as_view(), name="core-home")]
