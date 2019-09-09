@@ -11,7 +11,7 @@ class HomeTemplateView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["about"] = About.objects.first()
         context["skills"] = Skill.objects.all()
-        context["services"] = Service.objects.all()
-        context["projects"] = Project.objects.all()
+        context["service"] = Service.objects.all()
+        context["project"] = Project.objects.all()
         return context
 
