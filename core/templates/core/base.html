@@ -22,7 +22,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'app/main.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/main.css'%}">
 
 
 
@@ -33,7 +33,9 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="app/home.html"><img src="media/images/nerd.png" alt="banner img"> Xavier</a>
+            <a class="navbar-brand" href="core/home.html"><img src="{% static "core/images/nerd.png"%}"
+                    alt="banner img">
+                Xavier</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
