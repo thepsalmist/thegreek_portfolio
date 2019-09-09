@@ -9,7 +9,8 @@
 
             <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
                 <div class="about-text">
-                    <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small>
+                    <small class="small-text">Welcome to <span class="mobile-block">the greek's portfolio
+                            website!</span></small>
                     <h1 class="animated animated-text">
                         <span class="mr-2">Hello, I am Xavier </span>
                         <div class="animated-info">
@@ -46,8 +47,8 @@
         <div class="row">
 
             <div class="col-lg-6 col-12" id="about_section">
-                <h2 class="mb-4">About me<span>
-                        <hr></span></h2>
+                <h2 class="mb-4">About me<span></h2>
+                <div class="heading_underline"></div>
                 <div class="media" id="about_section">
                     <img class="rounded-circle account-img" src="{{about.image.url}}" alt="">
                 </div>
@@ -59,9 +60,8 @@
             </div>
 
             <div class="col-lg-6 col-12 text-center">
-                <h2 class="mb-4 mobile-mt-2">Skills<span>
-                        <hr></span></h2>
-
+                <h2 class="mb-4 mobile-mt-2">Skills</h2>
+                <div class="heading_underline"></div>
 
                 <div class="timeline">
                     {% for skill in skills%}
@@ -86,8 +86,8 @@
         <div class="row">
             <div class="col-lg-11 text-center mx-auto col-12">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="mb-4">Services<span>
-                            <hr></span></h2>
+                    <h2 class="mb-4">Services</h2>
+                    <div class="heading_underline"></div>
                     <h3>Things I have designed for digital media agencies</h3>
                 </div>
             </div>
@@ -117,13 +117,9 @@
 <section class="d-lg-flex justify-content-center align-items-center" id="contact">
     <div class="container">
         <div class="row">
-            <h2 class="mb-4">Get in touch<span>
-                    <hr></span>
-            </h2>
-        </div>
-        <div class="row">
-
             <div class="col-lg-6 col-12">
+                <h2 class="mb-4 text-center">Get in touch</h2>
+                <div class="heading_underline"></div>
                 <div class="form-group">
                     <input type="text" placeholder="Name" class="form-control mb-4">
                     <input type="email" placeholder="E-mail" class="form-control mb-4">
@@ -134,7 +130,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-6 col-12">
+            <div class="col-lg-6 col-12" id="contact_me">
                 <h3>Contact Info.</h3>
                 <div class="contact_icons">
                     <a href="https://twitter.com/xavierfrank4"><i class="fab fa-twitter cyan-text fa-lg mr-3"></i></a>
